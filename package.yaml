@@ -1,0 +1,95 @@
+name:                api-enforcer
+version:             0.1.0.0
+github:              "agrafix/api-enforcer"
+license:             BSD3
+author:              "Alexander Thiemann"
+maintainer:          "mail@athiemann.net"
+copyright:           "2018 Alexander Thiemann <mail@athiemann.net>"
+
+extra-source-files:
+  - README.md
+
+synopsis:            Library and tool to test APIs
+category:            Test
+
+description:         Please see the README on GitHub at <https://github.com/agrafix/api-enforcer#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - text
+  - vector
+  - bytestring
+  - unordered-containers
+  - scientific
+
+ghc-options: -Wall -Werror
+
+default-extensions:
+  - ApplicativeDo
+  - BangPatterns
+  - ConstraintKinds
+  - DataKinds
+  - DefaultSignatures
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveGeneric
+  - DeriveLift
+  - DeriveTraversable
+  - EmptyCase
+  - ExistentialQuantification
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - InstanceSigs
+  - KindSignatures
+  - LambdaCase
+  - MultiParamTypeClasses
+  - MultiWayIf
+  - NamedFieldPuns
+  - OverloadedStrings
+  - PatternSynonyms
+  - RankNTypes
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TupleSections
+  - TypeApplications
+  - TypeFamilies
+  - TypeFamilyDependencies
+  - TypeOperators
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Test.Api.Enforcer.Example
+    - Test.Api.Enforcer.Types
+    - Test.Api.Enforcer.RequestGen
+  dependencies:
+    - http-types
+    - aeson
+    - aeson-pretty
+    - wreq
+    - QuickCheck
+
+executables:
+  api-enforcer-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - api-enforcer
+
+tests:
+  api-enforcer-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - api-enforcer
