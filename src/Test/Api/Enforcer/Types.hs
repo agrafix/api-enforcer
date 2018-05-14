@@ -18,7 +18,7 @@ import qualified Data.Vector as V
 
 data StringValue
     = StringValue
-    { sv_alphabet :: [Char]
+    { sv_alphabet :: V.Vector Char
     , sv_minLength :: Maybe Int
     , sv_maxLength :: Maybe Int
     } deriving (Show, Eq)

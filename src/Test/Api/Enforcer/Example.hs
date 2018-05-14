@@ -28,7 +28,7 @@ dummyReq =
         , ra_value =
                 RavString
                 StringValue
-                { sv_alphabet = ['A'..'Z'] ++ ['a'..'z']
+                { sv_alphabet = V.fromList $ ['A'..'Z'] ++ ['a'..'z']
                 , sv_minLength = Just 4
                 , sv_maxLength = Just 20
                 }

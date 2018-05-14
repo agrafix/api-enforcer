@@ -40,7 +40,7 @@ boundedList x elemGen =
 
 doStringValue :: StringValue -> Gen T.Text
 doStringValue sv =
-    do let strGen = elements (sv_alphabet sv)
+    do let strGen = elements $ V.toList $ sv_alphabet sv
        T.pack <$> boundedList (sv_minLength sv, sv_maxLength sv) strGen
 
 doNumValue :: (Arbitrary i, Num i, Ord i) => NumValue i -> Gen i
