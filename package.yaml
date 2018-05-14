@@ -20,7 +20,9 @@ dependencies:
   - vector
   - bytestring
   - unordered-containers
+  - hashable
   - scientific
+  - mtl
 
 ghc-options: -Wall -Werror
 
