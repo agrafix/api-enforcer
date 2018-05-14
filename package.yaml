@@ -63,7 +63,7 @@ library:
   source-dirs: src
   exposed-modules:
     - Test.Api.Enforcer.Example
-    - Test.Api.Enforcer.Types
+    - Test.Api.Enforcer.Request
     - Test.Api.Enforcer.RequestGen
   dependencies:
     - http-types

@@ -2,7 +2,7 @@ module Test.Api.Enforcer.RequestGen
     ( requestGen )
 where
 
-import Test.Api.Enforcer.Types
+import Test.Api.Enforcer.Request
 import qualified Data.HashMap.Strict as HM
 
 import Data.Aeson

@@ -1,7 +1,7 @@
 module Test.Api.Enforcer.Example where
 
+import Test.Api.Enforcer.Request
 import Test.Api.Enforcer.RequestGen
-import Test.Api.Enforcer.Types
 
 import Data.Aeson.Encode.Pretty
 import Test.QuickCheck

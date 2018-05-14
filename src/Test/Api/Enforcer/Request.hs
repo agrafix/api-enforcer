@@ -1,5 +1,5 @@
 {-# LANGUAGE StrictData #-}
-module Test.Api.Enforcer.Types
+module Test.Api.Enforcer.Request
     ( StringValue(..)
     , NumValue(..)
     , ListValue(..)
